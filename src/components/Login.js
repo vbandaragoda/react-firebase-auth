@@ -3,6 +3,7 @@ import { Form, Card, Button, Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useHistory } from "react-router-dom"
 
+
 export default function Login() {
 
     const emailRef = useRef()
@@ -46,6 +47,14 @@ export default function Login() {
                             <Form.Label>Password</Form.Label>
                             <Form.Control ref={passwordRef} type="password" required />
                         </Form.Group>
+
+                        <input type="checkbox" id="remember-me" />
+                      <label
+                        htmlFor="remember-me"
+                        className="RememberMe"
+                      >
+                        Remember me
+                      </label>
 
                         <Button disable={loading} className="w-100 mt-4" type="submit">Login</Button>
                     </Form>
